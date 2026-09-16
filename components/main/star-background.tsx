@@ -15,8 +15,6 @@ import type { Points as PointsType, Group as GroupType, Mesh as MeshType } from 
 // Preload planet textures for instant rendering
 if (typeof window !== "undefined") {
   useTexture.preload("/space/earth-texture.jpg");
-  useTexture.preload("/space/saturn-texture.jpg");
-  useTexture.preload("/space/saturn-ring.png");
 }
 
 /* =========================================================================
@@ -269,53 +267,7 @@ const EarthPlanet = () => {
 };
 
 /* =========================================================================
-   3. 3D Ringed Saturn Planet
-   ========================================================================= */
-const SaturnPlanet = () => {
-  const saturnPlanetRef = useRef<GroupType>(null);
-  const ringRef = useRef<MeshType>(null);
-  const planetTexture = useTexture("/space/saturn-texture.jpg");
-  const ringTexture = useTexture("/space/saturn-ring.png");
-
-  useFrame((_state, delta) => {
-    if (saturnPlanetRef.current) {
-      saturnPlanetRef.current.rotation.y += delta * 0.06;
-    }
-    if (ringRef.current) {
-      ringRef.current.rotation.z += delta * 0.02;
-    }
-  });
-
-  return (
-    <group position={[-1.38, 0.72, -1.25]} rotation={[0.48, 0.35, 0]}>
-      {/* Saturn Body */}
-      <group ref={saturnPlanetRef}>
-        <mesh castShadow receiveShadow>
-          <sphereGeometry args={[0.22, 48, 48]} />
-          <meshStandardMaterial
-            map={planetTexture}
-            roughness={0.75}
-            metalness={0.05}
-          />
-        </mesh>
-      </group>
-
-      {/* Saturn 3D Concentric Ring System */}
-      <mesh ref={ringRef} rotation={[-Math.PI / 2.3, 0, 0]}>
-        <ringGeometry args={[0.29, 0.54, 64]} />
-        <meshBasicMaterial
-          map={ringTexture}
-          transparent
-          opacity={0.88}
-          side={THREE.DoubleSide}
-        />
-      </mesh>
-    </group>
-  );
-};
-
-/* =========================================================================
-   4. Multi-Tier Cosmic Nebula & Starfield
+   3. Multi-Tier Cosmic Nebula & Starfield
    Deep cosmos stars, violet dust, and cyan galactic cluster
    ========================================================================= */
 export const StarBackground = (props: PointsInstancesProps) => {
@@ -410,8 +362,8 @@ export const StarBackground = (props: PointsInstancesProps) => {
 };
 
 /* =========================================================================
-   5. StarsCanvas Master Component
-   Combines 3D Earth, Ringed Saturn, Multi-Tier Nebula, and Ulkapind Canvas
+   4. StarsCanvas Master Component
+   Combines 3D Earth, Multi-Tier Nebula, and Ulkapind Canvas
    ========================================================================= */
 export const StarsCanvas = () => (
   <div className="w-full h-auto fixed inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -428,9 +380,8 @@ export const StarsCanvas = () => (
         {/* Multi-tier Starfield & Nebulae */}
         <StarBackground />
 
-        {/* 3D Celestial Bodies: Earth with Atmosphere & Saturn with 3D Rings */}
+        {/* 3D Earth with Atmosphere (positioned far in bottom-right) */}
         <EarthPlanet />
-        <SaturnPlanet />
       </Suspense>
     </Canvas>
   </div>

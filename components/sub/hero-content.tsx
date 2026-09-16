@@ -55,99 +55,15 @@ export const HeroContent = () => {
           </Link>
         </motion.div>
 
-        {/* Main Headline with Cosmic Stagger & Fluid Gradient Animation */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.12,
-                delayChildren: 0.25,
-              },
-            },
-          }}
-          className="flex flex-col gap-2 mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
-        >
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <motion.span
-              variants={{
-                hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { type: "spring", damping: 14, stiffness: 120 },
-                },
-              }}
-              className="inline-block"
-            >
-              Turning
-            </motion.span>
-
-            <motion.span
-              variants={{
-                hidden: { opacity: 0, y: 30, filter: "blur(8px)", scale: 0.92 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  scale: 1,
-                  transition: { type: "spring", damping: 14, stiffness: 120 },
-                },
-              }}
-              className="inline-block text-cyan-300 drop-shadow-[0_0_25px_rgba(0,229,255,0.45)]"
-            >
-              Raw Data
-            </motion.span>
-
-            <motion.span
-              variants={{
-                hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { type: "spring", damping: 14, stiffness: 120 },
-                },
-              }}
-              className="inline-block text-gray-200"
-            >
-              into
-            </motion.span>
-          </div>
-
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 35, filter: "blur(12px)", scale: 0.94 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-                scale: 1,
-                transition: {
-                  type: "spring",
-                  damping: 12,
-                  stiffness: 100,
-                  delay: 0.65,
-                },
-              },
-            }}
-            className="flex items-center flex-wrap gap-2 group cursor-default"
-          >
-            <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400 animate-gradient-flow drop-shadow-[0_0_35px_rgba(0,229,255,0.55)] tracking-tight hover:brightness-125 transition-all duration-300">
+        {/* Main Headline (Clean & Static) */}
+        <div className="flex flex-col gap-2 mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+          <span>
+            Turning Raw Data into{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400">
               Executive Decisions.
             </span>
-            {/* Pulsing Cyber Terminal Indicator */}
-            <motion.span
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 0.9, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-block w-2 sm:w-2.5 h-8 sm:h-10 lg:h-12 bg-cyan-400 rounded-sm shadow-[0_0_15px_#22d3ee] align-middle ml-1"
-            />
-          </motion.div>
-        </motion.div>
+          </span>
+        </div>
 
         {/* Professional Summary */}
         <motion.p
