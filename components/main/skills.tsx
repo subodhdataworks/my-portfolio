@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SkillText } from "@/components/sub/skill-text";
@@ -9,14 +8,9 @@ import {
   FaDatabase,
   FaCode,
   FaCheckCircle,
-  FaVideo,
 } from "react-icons/fa";
 
 export const Skills = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string>(
-    "/videos/skills-video.mp4"
-  );
-
   const skillCategories = [
     {
       category: "Business Intelligence & Executive Dashboards",
@@ -149,99 +143,66 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-6 h-full relative overflow-hidden py-20 px-4 max-w-7xl mx-auto z-20"
+      className="flex flex-col items-center justify-center gap-8 h-full relative overflow-hidden py-20 px-4 md:px-8 max-w-7xl mx-auto z-20"
     >
       <SkillText />
 
-      {/* 3D Cinematic Skills Video Showcase */}
-      <div className="w-full max-w-4xl mx-auto my-4 z-20">
-        <div className="relative rounded-3xl overflow-hidden border border-cyan-500/50 shadow-[0_0_50px_rgba(0,229,255,0.3)] bg-[#0c0524]/90 backdrop-blur-xl group">
+      {/* 3D Cinematic Cosmos Analytics Video Showcase (Full-Width Large Viewport) */}
+      <div className="w-full max-w-6xl mx-auto my-6 z-20">
+        <div className="relative rounded-3xl overflow-hidden border-2 border-cyan-400/60 shadow-[0_0_60px_rgba(0,229,255,0.45)] bg-[#030014] group">
           <video
-            key={selectedVideo}
-            className="w-full aspect-video object-cover"
+            className="w-full aspect-[16/9] sm:aspect-[21/9] md:aspect-[16/8] object-cover"
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
           >
-            <source src={selectedVideo} type="video/mp4" />
-            <source src="/videos/skills-video.webm" type="video/webm" />
+            <source src="/videos/universe_data_analytics.mp4" type="video/mp4" />
           </video>
 
-          {/* Video Switcher Bar */}
-          <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-3 p-2.5 px-4 rounded-2xl bg-[#030014]/90 backdrop-blur-md border border-purple-800/40">
-            <span className="text-xs font-semibold text-gray-300 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-              Interactive Analytics Universe
+          {/* Glowing Cosmic Telemetry Overlay */}
+          <div className="absolute top-4 left-4 flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 shadow-lg">
+            <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping" />
+            <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
+              🪐 Cosmos Analytics • 3D Data Universe
             </span>
+          </div>
 
-            <div className="flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={() => setSelectedVideo("/videos/skills-video.mp4")}
-                className={`px-3 py-1 text-xs rounded-xl font-medium transition-all ${
-                  selectedVideo.includes("skills-video")
-                    ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-[0_0_12px_rgba(147,51,234,0.6)]"
-                    : "bg-purple-950/60 text-gray-300 hover:text-white"
-                }`}
-              >
-                🌟 Subodh Front View
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setSelectedVideo("/videos/Scene_02_Data_Analyst_BEST_FINAL.mp4")}
-                className={`px-3 py-1 text-xs rounded-xl font-medium transition-all ${
-                  selectedVideo.includes("Scene_02")
-                    ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-[0_0_12px_rgba(6,182,212,0.6)]"
-                    : "bg-purple-950/60 text-gray-300 hover:text-white"
-                }`}
-              >
-                🌌 3D Tools Galaxy
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setSelectedVideo("/videos/universe_data_analytics.mp4")}
-                className={`px-3 py-1 text-xs rounded-xl font-medium transition-all ${
-                  selectedVideo.includes("universe_data_analytics")
-                    ? "bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-[0_0_12px_rgba(16,185,129,0.6)]"
-                    : "bg-purple-950/60 text-gray-300 hover:text-white"
-                }`}
-              >
-                🪐 Cosmos Analytics
-              </button>
-            </div>
+          <div className="absolute bottom-4 right-4 hidden sm:flex items-center gap-3 py-1.5 px-4 rounded-full bg-[#030014]/90 backdrop-blur-md border border-purple-500/40 text-xs font-medium text-purple-200">
+            <span>High-Dimensional Analytics &amp; Pipeline Engine</span>
           </div>
         </div>
       </div>
 
-      {/* Categorized Skills Command Center */}
-      <div className="w-full flex flex-col gap-10 mt-6 z-20">
-        {skillCategories.map((cat, idx) => (
-          <div key={cat.category} className="flex flex-col gap-4">
+      {/* Categorized Skills Command Center with High-Contrast White Cards */}
+      <div className="w-full flex flex-col gap-12 mt-4 z-20">
+        {skillCategories.map((cat) => (
+          <div key={cat.category} className="flex flex-col gap-5">
+            {/* Category Header */}
             <div className="flex items-center justify-between border-b border-purple-900/40 pb-3">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-6 rounded-full bg-gradient-to-b from-cyan-400 to-purple-500" />
-                <h3 className="text-lg sm:text-xl font-bold text-white">
+                <span className="w-2.5 h-7 rounded-full bg-gradient-to-b from-cyan-400 to-purple-500 shadow-[0_0_12px_rgba(0,229,255,0.8)]" />
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
                   {cat.category}
                 </h3>
               </div>
-              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-950/70 border border-purple-800/40 text-purple-300">
+              <span className="text-xs font-bold px-3.5 py-1 rounded-full bg-purple-950/90 border border-purple-500/50 text-purple-200 shadow-md">
                 {cat.badge}
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {/* High-Contrast White Skill Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {cat.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="rounded-2xl border border-purple-900/40 bg-gradient-to-b from-[#0c0524]/80 to-[#030014]/90 p-4 hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-all flex flex-col justify-between group"
+                  className="rounded-2xl border-2 border-white/90 bg-white text-slate-900 p-5 shadow-[0_12px_30px_rgba(0,0,0,0.35)] hover:shadow-[0_0_35px_rgba(0,229,255,0.7)] hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#030014] border border-purple-800/50 p-2 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    {/* Card Top: Icon + Level Badge */}
+                    <div className="flex items-center justify-between mb-3.5">
+                      <div className="w-13 h-13 w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 p-2 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
                         <Image
                           src={skill.image}
                           alt={skill.name}
@@ -250,24 +211,26 @@ export const Skills = () => {
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-700/40 text-cyan-300">
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-cyan-100 border border-cyan-300 text-cyan-950 shadow-sm">
                         {skill.level}
                       </span>
                     </div>
 
-                    <h4 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h4 className="text-base font-extrabold text-slate-900 group-hover:text-purple-700 transition-colors">
                       {skill.name}
                     </h4>
-                    <p className="text-xs text-gray-300 mt-1.5 leading-relaxed">
+                    <p className="text-xs text-slate-600 mt-2 leading-relaxed font-medium">
                       {skill.desc}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-2.5 border-t border-purple-900/30 flex items-center justify-between text-[11px] text-gray-400">
-                    <span className="flex items-center gap-1 text-emerald-300 font-medium">
-                      <FaCheckCircle className="w-3 h-3" /> Verified Skill
+                  <div className="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-[11px]">
+                    <span className="flex items-center gap-1.5 text-emerald-700 font-bold">
+                      <FaCheckCircle className="w-3.5 h-3.5 text-emerald-600" /> Verified Skill
                     </span>
-                    <span className="font-mono text-purple-300">{skill.exp}</span>
+                    <span className="font-mono font-bold text-purple-800 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
+                      {skill.exp}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -276,18 +239,17 @@ export const Skills = () => {
         ))}
       </div>
 
-      {/* Atmospheric Background Video */}
+      {/* Atmospheric Background Video (Cosmos Analytics) */}
       <div className="w-full h-full absolute top-0 left-0 -z-10 overflow-hidden pointer-events-none">
         <video
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-25"
           preload="auto"
           playsInline
           loop
           muted
           autoPlay
         >
-          <source src="/videos/skills-video.mp4" type="video/mp4" />
-          <source src="/videos/skills-video.webm" type="video/webm" />
+          <source src="/videos/universe_data_analytics.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-[#030014] via-transparent to-[#030014] opacity-80" />
       </div>
