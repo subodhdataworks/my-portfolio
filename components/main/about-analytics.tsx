@@ -13,7 +13,6 @@ import {
   FaArrowRight,
   FaIndustry,
 } from "react-icons/fa";
-import { SiPostgresql, SiPython } from "react-icons/si";
 
 export const AboutAnalytics = () => {
   const [activeTab, setActiveTab] = useState<"dax" | "sql" | "python">("dax");
@@ -179,7 +178,7 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
         </p>
       </div>
 
-      {/* 4 Pillars Cards */}
+      {/* 4 Pillars with High-Contrast Highlighted White Cards */}
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         {pillars.map((p, idx) => {
           const IconComp = p.icon;
@@ -190,27 +189,27 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="rounded-2xl border border-purple-900/40 bg-gradient-to-b from-[#0c0524]/80 to-[#030014]/90 p-5 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(0,229,255,0.15)] transition-all flex flex-col justify-between group"
+              className="rounded-2xl border-2 border-white/90 bg-white text-slate-900 p-5 shadow-[0_12px_30px_rgba(0,0,0,0.35)] hover:shadow-[0_0_35px_rgba(0,229,255,0.7)] hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="p-2.5 rounded-xl bg-purple-950/70 border border-purple-700/50 text-cyan-400 group-hover:scale-110 transition-transform">
+                  <span className="p-3 rounded-2xl bg-purple-100 border border-purple-300 text-purple-800 shadow-sm group-hover:scale-110 transition-transform">
                     <IconComp className="w-5 h-5" />
                   </span>
-                  <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-cyan-950/70 border border-cyan-700/40 text-cyan-300">
+                  <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-cyan-100 border border-cyan-300 text-cyan-950 shadow-sm">
                     {p.stat}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-lg font-extrabold text-slate-900 mb-2 group-hover:text-purple-700 transition-colors">
                   {p.title}
                 </h3>
-                <p className="text-xs text-gray-300 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
                   {p.desc}
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-purple-900/30 text-[11px] font-medium text-purple-300">
+              <div className="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-purple-700">
                 {p.badge}
               </div>
             </motion.div>
@@ -218,34 +217,34 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
         })}
       </div>
 
-      {/* Interactive Production Code & Formula Sandbox */}
-      <div className="w-full rounded-3xl border border-cyan-500/30 bg-[#07021b]/90 backdrop-blur-xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+      {/* Interactive Production Code & Formula Sandbox (Clean High-Contrast Executive White Card Container) */}
+      <div className="w-full rounded-3xl border-2 border-white/90 bg-white text-slate-900 p-6 md:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.35)] relative overflow-hidden">
         {/* Terminal Top Bar */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-purple-800/40 pb-4 mb-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 pb-5 mb-6">
           <div className="flex items-center gap-3">
             {/* Terminal Dots */}
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-full bg-red-500/80" />
-              <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-              <span className="w-3 h-3 rounded-full bg-green-500/80" />
+              <span className="w-3.5 h-3.5 rounded-full bg-red-500 shadow-sm" />
+              <span className="w-3.5 h-3.5 rounded-full bg-yellow-500 shadow-sm" />
+              <span className="w-3.5 h-3.5 rounded-full bg-green-500 shadow-sm" />
             </div>
             <div className="flex items-center gap-2 pl-2">
-              <FaCode className="text-cyan-400 w-4 h-4" />
-              <span className="text-sm font-bold text-white font-mono">
+              <FaCode className="text-purple-700 w-4 h-4" />
+              <span className="text-sm font-extrabold text-slate-900 font-mono tracking-tight">
                 Production Code &amp; Formulas Written by Subodh
               </span>
             </div>
           </div>
 
           {/* Tab Selector Buttons */}
-          <div className="flex items-center gap-2 p-1 rounded-xl bg-[#030014] border border-purple-800/50">
+          <div className="flex items-center gap-1.5 p-1.5 rounded-xl bg-slate-100 border border-slate-300 shadow-inner">
             <button
               type="button"
               onClick={() => setActiveTab("dax")}
-              className={`px-3 py-1 text-xs font-mono font-semibold rounded-lg transition-all ${
+              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
                 activeTab === "dax"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
-                  : "text-gray-400 hover:text-white"
+                  ? "bg-purple-700 text-white shadow-md"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-200"
               }`}
             >
               📊 Power BI DAX
@@ -253,10 +252,10 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
             <button
               type="button"
               onClick={() => setActiveTab("sql")}
-              className={`px-3 py-1 text-xs font-mono font-semibold rounded-lg transition-all ${
+              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
                 activeTab === "sql"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
-                  : "text-gray-400 hover:text-white"
+                  ? "bg-purple-700 text-white shadow-md"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-200"
               }`}
             >
               🗄️ SQL Pipeline
@@ -264,10 +263,10 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
             <button
               type="button"
               onClick={() => setActiveTab("python")}
-              className={`px-3 py-1 text-xs font-mono font-semibold rounded-lg transition-all ${
+              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
                 activeTab === "python"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
-                  : "text-gray-400 hover:text-white"
+                  ? "bg-purple-700 text-white shadow-md"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-200"
               }`}
             >
               🐍 Python EDA
@@ -275,16 +274,16 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
           </div>
         </div>
 
-        {/* Code Display Area */}
-        <div className="relative rounded-2xl bg-[#030014] border border-purple-900/40 p-4 sm:p-5 font-mono text-xs sm:text-sm text-cyan-200 overflow-x-auto shadow-inner">
+        {/* Code Display Area: Sleek Dark IDE Terminal inside the White Card */}
+        <div className="relative rounded-2xl bg-[#030014] border-2 border-slate-800 p-5 sm:p-6 font-mono text-xs sm:text-sm text-cyan-200 overflow-x-auto shadow-2xl">
           <button
             type="button"
             onClick={handleCopyCode}
-            className="absolute top-4 right-4 p-2 rounded-lg bg-purple-950/80 hover:bg-cyan-950 text-gray-300 hover:text-cyan-300 border border-purple-700/40 hover:border-cyan-500 transition-all text-xs flex items-center gap-1.5"
+            className="absolute top-4 right-4 p-2 rounded-lg bg-slate-800/90 hover:bg-cyan-950 text-cyan-300 hover:text-cyan-200 border border-slate-700 hover:border-cyan-500 transition-all text-xs flex items-center gap-1.5 shadow-md"
             title="Copy Code"
           >
             <FaCopy className="w-3.5 h-3.5" />
-            <span className="text-[11px]">{copied ? "Copied to Clipboard!" : "Copy Snippet"}</span>
+            <span className="text-[11px] font-bold">{copied ? "Copied to Clipboard!" : "Copy Snippet"}</span>
           </button>
 
           <pre className="pt-2 leading-relaxed whitespace-pre font-mono text-gray-200">
@@ -293,20 +292,20 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
         </div>
 
         {/* Interactive Pipeline Steps Footer */}
-        <div className="mt-6 pt-5 border-t border-purple-900/40 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-300">
+        <div className="mt-6 pt-5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-700 font-medium">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-semibold text-cyan-300">Subodh&apos;s Data Pipeline:</span>
-            <span className="px-2.5 py-0.5 rounded-md bg-purple-950/80 border border-purple-800/40">1. Ingest (SQL/CSV/Sheets)</span>
-            <FaArrowRight className="w-3 h-3 text-purple-400" />
-            <span className="px-2.5 py-0.5 rounded-md bg-purple-950/80 border border-purple-800/40">2. Clean (Power Query / Python)</span>
-            <FaArrowRight className="w-3 h-3 text-purple-400" />
-            <span className="px-2.5 py-0.5 rounded-md bg-purple-950/80 border border-purple-800/40">3. Model (Star Schema &amp; DAX)</span>
-            <FaArrowRight className="w-3 h-3 text-purple-400" />
-            <span className="px-2.5 py-0.5 rounded-md bg-cyan-950/80 border border-cyan-600/50 text-cyan-300 font-semibold">4. Executive BI Dashboard</span>
+            <span className="font-extrabold text-purple-900">Subodh&apos;s Data Pipeline:</span>
+            <span className="px-3 py-1 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-bold">1. Ingest (SQL/CSV/Sheets)</span>
+            <FaArrowRight className="w-3 h-3 text-purple-600" />
+            <span className="px-3 py-1 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-bold">2. Clean (Power Query / Python)</span>
+            <FaArrowRight className="w-3 h-3 text-purple-600" />
+            <span className="px-3 py-1 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-bold">3. Model (Star Schema &amp; DAX)</span>
+            <FaArrowRight className="w-3 h-3 text-purple-600" />
+            <span className="px-3 py-1 rounded-lg bg-purple-100 border-2 border-purple-400 text-purple-900 font-extrabold shadow-sm">4. Executive BI Dashboard</span>
           </div>
 
-          <span className="flex items-center gap-1.5 text-emerald-300 font-semibold">
-            <FaCheckCircle className="w-3.5 h-3.5" />
+          <span className="flex items-center gap-1.5 text-emerald-700 font-bold">
+            <FaCheckCircle className="w-3.5 h-3.5 text-emerald-600" />
             Production-Tested Logic
           </span>
         </div>
