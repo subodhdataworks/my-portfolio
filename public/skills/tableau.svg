@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <!-- Central cross -->
+  <rect x="47.5" y="32" width="5" height="36" fill="#E8762D" rx="1.5"/>
+  <rect x="32" y="47.5" width="36" height="5" fill="#E8762D" rx="1.5"/>
+  
+  <!-- Top Cross -->
+  <rect x="48.5" y="10" width="3" height="20" fill="#E8443A" rx="1"/>
+  <rect x="40" y="18.5" width="20" height="3" fill="#E8443A" rx="1"/>
+  
+  <!-- Right Cross -->
+  <rect x="73.5" y="40" width="3" height="20" fill="#284998" rx="1"/>
+  <rect x="65" y="48.5" width="20" height="3" fill="#284998" rx="1"/>
+  
+  <!-- Bottom Cross -->
+  <rect x="48.5" y="70" width="3" height="20" fill="#5C6679" rx="1"/>
+  <rect x="40" y="78.5" width="20" height="3" fill="#5C6679" rx="1"/>
+  
+  <!-- Left Cross -->
+  <rect x="23.5" y="40" width="3" height="20" fill="#4E97C9" rx="1"/>
+  <rect x="15" y="48.5" width="20" height="3" fill="#4E97C9" rx="1"/>
+
+  <!-- Top Right Cross -->
+  <rect x="69" y="23" width="2.5" height="15" fill="#70993D" rx="1"/>
+  <rect x="62.75" y="29.25" width="15" height="2.5" fill="#70993D" rx="1"/>
+
+  <!-- Bottom Right Cross -->
+  <rect x="69" y="62" width="2.5" height="15" fill="#F49A24" rx="1"/>
+  <rect x="62.75" y="68.25" width="15" height="2.5" fill="#F49A24" rx="1"/>
+
+  <!-- Bottom Left Cross -->
+  <rect x="28.5" y="62" width="2.5" height="15" fill="#8C342F" rx="1"/>
+  <rect x="22.25" y="68.25" width="15" height="2.5" fill="#8C342F" rx="1"/>
+
+  <!-- Top Left Cross -->
+  <rect x="28.5" y="23" width="2.5" height="15" fill="#BE7DB1" rx="1"/>
+  <rect x="22.25" y="29.25" width="15" height="2.5" fill="#BE7DB1" rx="1"/>
+</svg>

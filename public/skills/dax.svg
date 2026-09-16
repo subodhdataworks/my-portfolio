@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="80" height="80">
+  <defs>
+    <linearGradient id="dax-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="url(#dax-grad)" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="24" y="29" fill="#60A5FA" font-family="Arial, sans-serif" font-weight="900" font-size="14" text-anchor="middle" letter-spacing="1">DAX</text>
+  <text x="24" y="38" fill="#93C5FD" font-family="Arial, sans-serif" font-weight="600" font-size="7" text-anchor="middle">FORMULAS</text>
+</svg>

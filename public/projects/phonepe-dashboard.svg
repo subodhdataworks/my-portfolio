@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" width="1000" height="625">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0520"/>
+      <stop offset="50%" stop-color="#140738"/>
+      <stop offset="100%" stop-color="#050114"/>
+    </linearGradient>
+    <linearGradient id="purple-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#673AB7"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="phonepe-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6739B6"/>
+      <stop offset="100%" stop-color="#472382"/>
+    </linearGradient>
+    <linearGradient id="chart-area" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#673AB7" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="625" fill="url(#bg-grad)"/>
+  
+  <!-- Subtle Grid Lines -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="125" x2="1000" y2="125"/>
+    <line x1="0" y1="250" x2="1000" y2="250"/>
+    <line x1="0" y1="375" x2="1000" y2="375"/>
+    <line x1="0" y1="500" x2="1000" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="625"/>
+    <line x1="400" y1="0" x2="400" y2="625"/>
+    <line x1="600" y1="0" x2="600" y2="625"/>
+    <line x1="800" y1="0" x2="800" y2="625"/>
+  </g>
+
+  <!-- Top Dashboard Bar -->
+  <rect x="40" y="30" width="920" height="60" rx="12" fill="#1b113b" stroke="#7042f8" stroke-opacity="0.4"/>
+  <circle cx="75" cy="60" r="16" fill="#6739B6"/>
+  <text x="75" y="66" fill="#ffffff" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18" text-anchor="middle">पे</text>
+  <text x="105" y="66" fill="#ffffff" font-family="Segoe UI, sans-serif" font-weight="700" font-size="20">PhonePe Pulse Payment Analytics Dashboard</text>
+  <rect x="760" y="45" width="85" height="30" rx="15" fill="#7042f8" fill-opacity="0.3" stroke="#7042f8"/>
+  <text x="802" y="65" fill="#00E5FF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Power BI</text>
+  <rect x="855" y="45" width="90" height="30" rx="15" fill="#29B6AF" fill-opacity="0.2" stroke="#29B6AF"/>
+  <text x="900" y="65" fill="#29B6AF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">DAX &amp; ETL</text>
+
+  <!-- KPI Cards Row -->
+  <!-- KPI 1 -->
+  <rect x="40" y="110" width="215" height="95" rx="12" fill="#180e36" stroke="#4a258a" stroke-width="1.5"/>
+  <text x="60" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Total Transaction Value</text>
+  <text x="60" y="175" fill="#00E5FF" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">₹3.47 B+</text>
+  <text x="210" y="175" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">↑ 24%</text>
+
+  <!-- KPI 2 -->
+  <rect x="275" y="110" width="215" height="95" rx="12" fill="#180e36" stroke="#4a258a" stroke-width="1.5"/>
+  <text x="295" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Total Transactions</text>
+  <text x="295" y="175" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">300K+</text>
+  <text x="445" y="175" fill="#a78bfa" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">P2P/P2M</text>
+
+  <!-- KPI 3 -->
+  <rect x="510" y="110" width="215" height="95" rx="12" fill="#180e36" stroke="#4a258a" stroke-width="1.5"/>
+  <text x="530" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Unique Users</text>
+  <text x="530" y="175" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">108,000</text>
+  <text x="680" y="175" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">Active</text>
+
+  <!-- KPI 4 -->
+  <rect x="745" y="110" width="215" height="95" rx="12" fill="#180e36" stroke="#4a258a" stroke-width="1.5"/>
+  <text x="765" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Success Rate</text>
+  <text x="765" y="175" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">96.0%</text>
+  <text x="915" y="175" fill="#00E5FF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">High SLA</text>
+
+  <!-- Main Chart: Transaction Volume Trend -->
+  <rect x="40" y="225" width="580" height="230" rx="14" fill="#150b30" stroke="#3b1d70"/>
+  <text x="65" y="258" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Quarterly Transaction Volume &amp; Frequency Trend</text>
+  <text x="65" y="278" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="12">Interactive DAX Time-Intelligence Measures</text>
+
+  <!-- Chart Area -->
+  <path d="M65 410 C120 380, 180 395, 230 350 C280 305, 340 340, 400 290 C460 240, 520 280, 580 235 L580 410 L65 410 Z" fill="url(#chart-area)"/>
+  <path d="M65 410 C120 380, 180 395, 230 350 C280 305, 340 340, 400 290 C460 240, 520 280, 580 235" fill="none" stroke="#00E5FF" stroke-width="3.5" filter="url(#glow)"/>
+  
+  <!-- Points -->
+  <circle cx="230" cy="350" r="5" fill="#ffffff" stroke="#00E5FF" stroke-width="2"/>
+  <circle cx="400" cy="290" r="5" fill="#ffffff" stroke="#00E5FF" stroke-width="2"/>
+  <circle cx="580" cy="235" r="5" fill="#ffffff" stroke="#00E5FF" stroke-width="2"/>
+
+  <!-- Right Chart: Payment Categories Donut & Breakdown -->
+  <rect x="640" y="225" width="320" height="230" rx="14" fill="#150b30" stroke="#3b1d70"/>
+  <text x="665" y="258" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Transaction Breakdown</text>
+  
+  <!-- Donut Ring (SVG circles) -->
+  <circle cx="730" cy="345" r="55" fill="none" stroke="#25164f" stroke-width="24"/>
+  <circle cx="730" cy="345" r="55" fill="none" stroke="#00E5FF" stroke-width="24" stroke-dasharray="210 345" stroke-dashoffset="0"/>
+  <circle cx="730" cy="345" r="55" fill="none" stroke="#7042f8" stroke-width="24" stroke-dasharray="90 345" stroke-dashoffset="-210"/>
+  <circle cx="730" cy="345" r="55" fill="none" stroke="#E6AD00" stroke-width="24" stroke-dasharray="45 345" stroke-dashoffset="-300"/>
+  <text x="730" y="342" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">UPI P2P</text>
+  <text x="730" y="360" fill="#00E5FF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">62%</text>
+
+  <!-- Legend -->
+  <rect x="815" y="300" width="10" height="10" rx="2" fill="#00E5FF"/>
+  <text x="835" y="310" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="12">Peer-to-Peer</text>
+  <rect x="815" y="335" width="10" height="10" rx="2" fill="#7042f8"/>
+  <text x="835" y="345" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="12">Merchant (P2M)</text>
+  <rect x="815" y="370" width="10" height="10" rx="2" fill="#E6AD00"/>
+  <text x="835" y="380" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="12">Recharge/Bills</text>
+
+  <!-- Bottom Bar: State Wise & Demographics Distribution -->
+  <rect x="40" y="475" width="920" height="120" rx="14" fill="#150b30" stroke="#3b1d70"/>
+  <text x="65" y="505" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="15" font-weight="600">Demographic Distribution &amp; Geographic Heatmap</text>
+
+  <!-- Mini Horizontal Bars -->
+  <text x="65" y="535" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="12">Maharashtra</text>
+  <rect x="160" y="523" width="220" height="14" rx="4" fill="#00E5FF" opacity="0.8"/>
+  <text x="390" y="535" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">₹780M</text>
+
+  <text x="65" y="565" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="12">Karnataka</text>
+  <rect x="160" y="553" width="180" height="14" rx="4" fill="#7042f8" opacity="0.8"/>
+  <text x="350" y="565" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">₹620M</text>
+
+  <text x="500" y="535" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="12">Telangana</text>
+  <rect x="580" y="523" width="160" height="14" rx="4" fill="#29B6AF" opacity="0.8"/>
+  <text x="750" y="535" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">₹540M</text>
+
+  <text x="500" y="565" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="12">Delhi NCR</text>
+  <rect x="580" y="553" width="140" height="14" rx="4" fill="#E6AD00" opacity="0.8"/>
+  <text x="730" y="565" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">₹490M</text>
+
+  <rect x="825" y="520" width="115" height="50" rx="8" fill="#1b113b" stroke="#7042f8" stroke-width="1"/>
+  <text x="882" y="542" fill="#b49bff" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">Data Processed</text>
+  <text x="882" y="560" fill="#00E5FF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">SQL + DAX</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="ms-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#020c1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#ms-card)" stroke="#00A4EF" stroke-width="1.5"/>
+  <!-- Microsoft 4 squares -->
+  <rect x="18" y="18" width="13" height="13" fill="#F25022" rx="1.5"/>
+  <rect x="33" y="18" width="13" height="13" fill="#7FBA00" rx="1.5"/>
+  <rect x="18" y="33" width="13" height="13" fill="#00A4EF" rx="1.5"/>
+  <rect x="33" y="33" width="13" height="13" fill="#FFB900" rx="1.5"/>
+</svg>

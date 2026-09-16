@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" width="1000" height="625">
+  <defs>
+    <linearGradient id="sb-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051c14"/>
+      <stop offset="50%" stop-color="#0a2e22"/>
+      <stop offset="100%" stop-color="#03120d"/>
+    </linearGradient>
+    <linearGradient id="sb-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00704A"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="caffeine-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="625" fill="url(#sb-grad)"/>
+
+  <!-- Top Dashboard Bar -->
+  <rect x="40" y="30" width="920" height="60" rx="12" fill="#0d3b2c" stroke="#00704A" stroke-opacity="0.6"/>
+  <circle cx="75" cy="60" r="16" fill="#00704A"/>
+  <circle cx="75" cy="60" r="12" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="75" y="66" fill="#ffffff" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16" text-anchor="middle">★</text>
+  <text x="105" y="66" fill="#ffffff" font-family="Segoe UI, sans-serif" font-weight="700" font-size="20">Starbucks Beverage &amp; Nutrition Analytics</text>
+  <rect x="735" y="45" width="105" height="30" rx="15" fill="#00704A" fill-opacity="0.4" stroke="#2DD4BF"/>
+  <text x="787" y="65" fill="#2DD4BF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Power Query</text>
+  <rect x="850" y="45" width="95" height="30" rx="15" fill="#00704A" fill-opacity="0.4" stroke="#F59E0B"/>
+  <text x="897" y="65" fill="#F59E0B" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">DAX Models</text>
+
+  <!-- KPI Cards Row -->
+  <rect x="40" y="110" width="215" height="95" rx="12" fill="#0b2c21" stroke="#00704A" stroke-width="1.5"/>
+  <text x="60" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Beverage Items Analyzed</text>
+  <text x="60" y="175" fill="#2DD4BF" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">240+ Items</text>
+  <text x="210" y="175" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">Menu</text>
+
+  <rect x="275" y="110" width="215" height="95" rx="12" fill="#0b2c21" stroke="#00704A" stroke-width="1.5"/>
+  <text x="295" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Product Categories</text>
+  <text x="295" y="175" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">9 Categories</text>
+  <text x="445" y="175" fill="#2DD4BF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">Hot/Cold</text>
+
+  <rect x="510" y="110" width="215" height="95" rx="12" fill="#0b2c21" stroke="#00704A" stroke-width="1.5"/>
+  <text x="530" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Max Caffeine Level</text>
+  <text x="530" y="175" fill="#F59E0B" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">475 mg</text>
+  <text x="680" y="175" fill="#F59E0B" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">Brewed</text>
+
+  <rect x="745" y="110" width="215" height="95" rx="12" fill="#0b2c21" stroke="#00704A" stroke-width="1.5"/>
+  <text x="765" y="138" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500">Avg Calories</text>
+  <text x="765" y="175" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold">193.8 kcal</text>
+  <text x="900" y="175" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">Healthy</text>
+
+  <!-- Left Chart: Top 5 Highest-Caffeine Beverages -->
+  <rect x="40" y="225" width="540" height="370" rx="14" fill="#09241b" stroke="#0e4b37"/>
+  <text x="65" y="258" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Top 5 Highest-Caffeine Beverages</text>
+  <text x="65" y="278" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="12">Caffeine Concentration (mg) vs. Caloric Density</text>
+
+  <!-- Bar 1 -->
+  <text x="65" y="320" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="13">1. Brewed Coffee (Venti)</text>
+  <rect x="65" y="330" width="450" height="24" rx="6" fill="url(#caffeine-bar)"/>
+  <text x="525" y="347" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">475 mg</text>
+
+  <!-- Bar 2 -->
+  <text x="65" y="380" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="13">2. Caffè Americano (Venti)</text>
+  <rect x="65" y="390" width="360" height="24" rx="6" fill="url(#caffeine-bar)"/>
+  <text x="435" y="407" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">300 mg</text>
+
+  <!-- Bar 3 -->
+  <text x="65" y="440" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="13">3. Nitro Cold Brew (Grande)</text>
+  <rect x="65" y="450" width="310" height="24" rx="6" fill="url(#caffeine-bar)"/>
+  <text x="385" y="467" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">280 mg</text>
+
+  <!-- Bar 4 -->
+  <text x="65" y="500" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="13">4. Flat White (Venti)</text>
+  <rect x="65" y="510" width="240" height="24" rx="6" fill="url(#caffeine-bar)"/>
+  <text x="315" y="527" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">195 mg</text>
+
+  <!-- Bar 5 -->
+  <text x="65" y="560" fill="#e5e7eb" font-family="Segoe UI, sans-serif" font-size="13">5. Caramel Macchiato (Venti)</text>
+  <rect x="65" y="570" width="200" height="24" rx="6" fill="url(#caffeine-bar)"/>
+  <text x="275" y="587" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">150 mg</text>
+
+  <!-- Right Top Chart: Calories vs Sugar Scatter Matrix -->
+  <rect x="600" y="225" width="360" height="175" rx="14" fill="#09241b" stroke="#0e4b37"/>
+  <text x="625" y="255" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="15" font-weight="600">Category Calorie &amp; Sugar Matrix</text>
+  
+  <!-- Mini Bar comparisons -->
+  <text x="625" y="285" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="11">Frappuccino</text>
+  <rect x="710" y="275" width="180" height="12" rx="3" fill="#F59E0B"/>
+  <text x="900" y="285" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">410 kcal</text>
+
+  <text x="625" y="315" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="11">Signature Espresso</text>
+  <rect x="710" y="305" width="120" height="12" rx="3" fill="#2DD4BF"/>
+  <text x="840" y="315" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">240 kcal</text>
+
+  <text x="625" y="345" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="11">Teavana Teas</text>
+  <rect x="710" y="335" width="60" height="12" rx="3" fill="#10B981"/>
+  <text x="780" y="345" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">80 kcal</text>
+
+  <text x="625" y="375" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="11">Cold Brews</text>
+  <rect x="710" y="365" width="20" height="12" rx="3" fill="#3B82F6"/>
+  <text x="740" y="375" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="11">5 kcal</text>
+
+  <!-- Right Bottom: Interactive Slicers / DAX Measures -->
+  <rect x="600" y="420" width="360" height="175" rx="14" fill="#09241b" stroke="#0e4b37"/>
+  <text x="625" y="450" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="15" font-weight="600">ETL Pipeline &amp; DAX Measures</text>
+
+  <rect x="625" y="470" width="145" height="40" rx="8" fill="#00704A" fill-opacity="0.3" stroke="#2DD4BF" stroke-width="1"/>
+  <text x="697" y="488" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="10" text-anchor="middle">DAX Total Caffeine</text>
+  <text x="697" y="503" fill="#2DD4BF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">SUMX() Pattern</text>
+
+  <rect x="785" y="470" width="155" height="40" rx="8" fill="#00704A" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1"/>
+  <text x="862" y="488" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="10" text-anchor="middle">DAX Healthy Index</text>
+  <text x="862" y="503" fill="#F59E0B" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CALCULATE()</text>
+
+  <rect x="625" y="525" width="315" height="50" rx="8" fill="#0d3b2c" stroke="#00704A" stroke-width="1"/>
+  <text x="640" y="547" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">Power Query Cleaning:</text>
+  <text x="640" y="563" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="11">Standardized nulls, parsed caffeine mg, categorical normalization</text>
+</svg>
