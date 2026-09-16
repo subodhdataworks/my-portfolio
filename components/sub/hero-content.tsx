@@ -13,6 +13,7 @@ import {
   FaShieldAlt,
   FaCertificate,
   FaMicrosoft,
+  FaPlay,
 } from "react-icons/fa";
 
 import {
@@ -22,7 +23,7 @@ import {
 } from "@/lib/motion";
 
 export const HeroContent = () => {
-  const [photoView, setPhotoView] = useState<"circle" | "card">("circle");
+  const [photoView, setPhotoView] = useState<"video" | "circle" | "card">("video");
 
   return (
     <motion.div
@@ -138,7 +139,7 @@ export const HeroContent = () => {
         </motion.div>
       </div>
 
-      {/* Right Column: High-Impact Executive Showcase with Official Microsoft Badge */}
+      {/* Right Column: High-Impact Executive Showcase with Studio Video & Official Microsoft Badge */}
       <motion.div
         variants={slideInFromRight(0.8)}
         className="w-full lg:w-1/2 flex flex-col items-center justify-center relative mt-6 lg:mt-0"
@@ -150,10 +151,29 @@ export const HeroContent = () => {
         <div className="absolute w-[380px] md:w-[480px] h-[380px] md:h-[480px] rounded-full border border-cyan-500/20 border-dashed animate-[spin_40s_linear_infinite] pointer-events-none" />
         <div className="absolute w-[430px] md:w-[530px] h-[430px] md:h-[530px] rounded-full border border-purple-500/15 animate-[spin_55s_linear_infinite_reverse] pointer-events-none" />
 
-        {/* Main Photo Frame */}
+        {/* Main Photo/Video Showcase Frame */}
         <div className="relative group">
-          {photoView === "circle" ? (
-            /* Image 2: Professional Circular Avatar */
+          {photoView === "video" ? (
+            /* View 1: Live Studio Executive Video of Subodh */
+            <div className="relative w-[285px] sm:w-[335px] md:w-[375px] h-[370px] sm:h-[430px] md:h-[480px] rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-[0_0_55px_rgba(0,229,255,0.55)] hover:shadow-[0_0_75px_rgba(0,229,255,0.7)] transition-all duration-500">
+              <div className="w-full h-full rounded-[22px] overflow-hidden bg-white relative">
+                <video
+                  src="/videos/subodh-studio-video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 right-3 py-1 px-2.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 text-[10px] font-bold text-cyan-300 flex items-center gap-1.5 shadow-md">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span>LIVE STUDIO VIEW</span>
+                </div>
+              </div>
+            </div>
+          ) : photoView === "circle" ? (
+            /* View 2: Professional Circular Avatar */
             <div className="relative w-[290px] sm:w-[350px] md:w-[400px] h-[290px] sm:h-[350px] md:h-[400px] rounded-full p-2 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-[0_0_50px_rgba(0,229,255,0.45)] hover:shadow-[0_0_70px_rgba(0,229,255,0.6)] transition-all duration-500">
               <div className="w-full h-full rounded-full overflow-hidden bg-[#030014] relative">
                 <Image
@@ -166,7 +186,7 @@ export const HeroContent = () => {
               </div>
             </div>
           ) : (
-            /* Image 1: Studio Executive Card */
+            /* View 3: Studio Executive Card */
             <div className="relative w-[280px] sm:w-[330px] md:w-[370px] h-[360px] sm:h-[420px] md:h-[470px] rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-[0_0_50px_rgba(0,229,255,0.45)] hover:shadow-[0_0_70px_rgba(0,229,255,0.6)] transition-all duration-500">
               <div className="w-full h-full rounded-[22px] overflow-hidden bg-[#08021d] relative">
                 <Image
@@ -239,14 +259,25 @@ export const HeroContent = () => {
           </motion.div>
         </div>
 
-        {/* View Switcher Pill */}
-        <div className="mt-7 flex items-center gap-2 p-1.5 rounded-full bg-[#030014]/85 backdrop-blur-md border border-purple-800/40 z-20">
+        {/* View Switcher Pill: Now with Live Studio Video as the Star Feature */}
+        <div className="mt-7 flex flex-wrap justify-center items-center gap-2 p-1.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-purple-800/40 z-20 shadow-lg">
+          <button
+            type="button"
+            onClick={() => setPhotoView("video")}
+            className={`px-3.5 py-1.5 text-xs rounded-full font-bold transition-all ${
+              photoView === "video"
+                ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-[0_0_15px_rgba(0,229,255,0.6)]"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            🎬 Live Studio Video
+          </button>
           <button
             type="button"
             onClick={() => setPhotoView("circle")}
-            className={`px-3 py-1 text-xs rounded-full font-medium transition-all ${
+            className={`px-3 py-1.5 text-xs rounded-full font-semibold transition-all ${
               photoView === "circle"
-                ? "bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-[0_0_12px_rgba(0,229,255,0.5)]"
+                ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-[0_0_12px_rgba(112,66,248,0.6)]"
                 : "text-gray-400 hover:text-white"
             }`}
           >
@@ -255,13 +286,13 @@ export const HeroContent = () => {
           <button
             type="button"
             onClick={() => setPhotoView("card")}
-            className={`px-3 py-1 text-xs rounded-full font-medium transition-all ${
+            className={`px-3 py-1.5 text-xs rounded-full font-semibold transition-all ${
               photoView === "card"
-                ? "bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-[0_0_12px_rgba(0,229,255,0.5)]"
+                ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-[0_0_12px_rgba(112,66,248,0.6)]"
                 : "text-gray-400 hover:text-white"
             }`}
           >
-            👤 Executive Studio
+            👤 Executive Portrait
           </button>
         </div>
       </motion.div>
