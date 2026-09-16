@@ -154,21 +154,29 @@ export const HeroContent = () => {
         {/* Main Photo/Video Showcase Frame */}
         <div className="relative group">
           {photoView === "video" ? (
-            /* View 1: Live Studio Executive Video of Subodh */
-            <div className="relative w-[285px] sm:w-[335px] md:w-[375px] h-[370px] sm:h-[430px] md:h-[480px] rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-[0_0_55px_rgba(0,229,255,0.55)] hover:shadow-[0_0_75px_rgba(0,229,255,0.7)] transition-all duration-500">
-              <div className="w-full h-full rounded-[22px] overflow-hidden bg-white relative">
+            /* View 1: Live Studio Executive Video of Subodh (Transparent Cosmic Portal) */
+            <div className="relative w-[285px] sm:w-[335px] md:w-[375px] h-[370px] sm:h-[430px] md:h-[480px] rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-400/80 via-indigo-500/60 to-purple-500/80 shadow-[0_0_55px_rgba(0,229,255,0.5)] hover:shadow-[0_0_75px_rgba(0,229,255,0.7)] transition-all duration-500">
+              {/* Internal cosmic aura glow */}
+              <div className="absolute inset-0 bg-radial from-cyan-500/10 via-purple-500/5 to-transparent rounded-3xl pointer-events-none" />
+              <div className="w-full h-full rounded-[22px] overflow-hidden bg-[#030014]/40 backdrop-blur-[2px] relative">
                 <video
-                  src="/videos/subodh-studio-video.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
                   preload="auto"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-3 right-3 py-1 px-2.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 text-[10px] font-bold text-cyan-300 flex items-center gap-1.5 shadow-md">
+                  style={{
+                    maskImage: "linear-gradient(to bottom, black 86%, transparent 100%)",
+                    WebkitMaskImage: "linear-gradient(to bottom, black 86%, transparent 100%)",
+                  }}
+                >
+                  <source src="/videos/subodh-studio-transparent.webm" type="video/webm" />
+                  <source src="/videos/subodh-studio-space.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute top-3 right-3 py-1 px-2.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 text-[10px] font-bold text-cyan-300 flex items-center gap-1.5 shadow-md z-10">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span>LIVE STUDIO VIEW</span>
+                  <span>TRANSPARENT STUDIO VIEW</span>
                 </div>
               </div>
             </div>
