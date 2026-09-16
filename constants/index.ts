@@ -221,7 +221,7 @@ export const CERTIFICATIONS = [
     issuer: "Microsoft",
     date: "09/2026",
     link: "https://www.linkedin.com/in/subodh-kumar-3520503ba/details/certifications/",
-    image: "/certificates/microsoft.svg",
+    image: "/certificates/microsoft-pl300-badge.webp",
     highlight: true,
   },
   {
@@ -323,24 +323,24 @@ export const FOOTER_DATA = [
 
 export const NAV_LINKS = [
   {
-    title: "About me",
+    title: "About",
     link: "#about-me",
+  },
+  {
+    title: "PL-300 Certified",
+    link: "#certification",
   },
   {
     title: "Skills",
     link: "#skills",
   },
   {
-    title: "Experience",
-    link: "#experience",
-  },
-  {
     title: "Projects",
     link: "#projects",
   },
   {
-    title: "Credentials",
-    link: "#credentials",
+    title: "Experience",
+    link: "#experience",
   },
 ] as const;
 
