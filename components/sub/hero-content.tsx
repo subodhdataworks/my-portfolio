@@ -118,10 +118,13 @@ export const HeroContent = () => {
           </Link>
 
           <a
-            href="mailto:subodh.dataworks@gmail.com?subject=Data%20Analyst%20Role%20-%20Resume%20Request"
-            className="py-3 px-6 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 text-gray-200 hover:text-white font-semibold text-sm tracking-wide border border-purple-800/60 hover:border-cyan-400 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(112,66,248,0.25)]"
+            href="/Subodh_Kumar_Resume.pdf"
+            download="Subodh_Kumar_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-3 px-6 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 text-gray-200 hover:text-white font-semibold text-sm tracking-wide border border-purple-800/60 hover:border-cyan-400 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(112,66,248,0.25)] cursor-pointer group"
           >
-            <FaFileDownload className="w-3.5 h-3.5 text-cyan-300" />
+            <FaFileDownload className="w-3.5 h-3.5 text-cyan-300 group-hover:translate-y-0.5 transition-transform" />
             <span>Download Resume</span>
           </a>
         </motion.div>

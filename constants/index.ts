@@ -350,4 +350,5 @@ export const LINKS = {
   portfolio: "https://subodhdataworks.github.io/my-portfolio/",
   email: "mailto:subodh.dataworks@gmail.com",
   phone: "tel:+918210778369",
+  resume: "/Subodh_Kumar_Resume.pdf",
 };

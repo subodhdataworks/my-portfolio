@@ -57,6 +57,17 @@ export const Navbar = () => {
             >
               GitHub
             </Link>
+
+            {/* Resume PDF Download */}
+            <a
+              href="/Subodh_Kumar_Resume.pdf"
+              download="Subodh_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer text-cyan-300 hover:text-white transition-colors font-semibold"
+            >
+              Resume
+            </a>
           </div>
         </div>
 
@@ -116,6 +127,16 @@ export const Navbar = () => {
             >
               GitHub Profile
             </Link>
+            <a
+              href="/Subodh_Kumar_Resume.pdf"
+              download="Subodh_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer text-cyan-300 hover:text-white transition text-center text-lg font-semibold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Download Resume (PDF)
+            </a>
           </div>
 
           {/* Social Icons */}
