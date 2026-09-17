@@ -14,6 +14,8 @@ import {
   FaCertificate,
   FaMicrosoft,
   FaPlay,
+  FaArrowRight,
+  FaFileDownload,
 } from "react-icons/fa";
 
 import {
@@ -55,77 +57,97 @@ export const HeroContent = () => {
           </Link>
         </motion.div>
 
-        {/* Main Headline (Clean & Static) */}
-        <div className="flex flex-col gap-2 mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-          <span>
-            Turning Raw Data into{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400">
-              Executive Decisions.
-            </span>
+        {/* Main Headline & Direct Data Analyst Identity */}
+        <div className="flex flex-col gap-1.5 mt-1">
+          <span className="text-lg sm:text-xl text-cyan-400 font-mono font-bold tracking-wide">
+            Hi, I&apos;m Subodh Kumar
           </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+            Data Analyst{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400">
+              | Power BI, SQL &amp; DAX
+            </span>
+          </h1>
         </div>
 
         {/* Professional Summary */}
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-base sm:text-lg text-gray-300 my-1 leading-relaxed"
+          className="text-base sm:text-lg text-gray-300 my-0.5 leading-relaxed max-w-xl"
         >
-          Hi, I&apos;m <span className="text-white font-bold">Subodh Kumar</span>—a{" "}
-          <strong className="text-cyan-300 font-semibold">
-            Microsoft Certified Power BI Data Analyst (PL-300)
-          </strong>{" "}
-          specializing in DAX data modeling, SQL pipelines, and executive KPI scorecards. Experienced in modeling over{" "}
-          <span className="text-cyan-300 font-bold">₹3.47B+ across 288K+ digital transactions</span>.
+          I turn raw and messy data into clean dashboards and actionable insights. Microsoft Certified Power BI Data Analyst (PL-300) with experience analyzing{" "}
+          <strong className="text-cyan-300 font-semibold font-mono">
+            ₹3.47B+ across 288K+ digital transactions
+          </strong>.
         </motion.p>
+
+        {/* Core Tech Stack Pills */}
+        <motion.div
+          variants={slideInFromLeft(0.85)}
+          className="flex flex-wrap items-center gap-2 my-1"
+        >
+          <span className="px-3 py-1 rounded-lg bg-[#0e0730]/90 border border-amber-500/50 text-amber-300 text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+            Power BI
+          </span>
+          <span className="px-3 py-1 rounded-lg bg-[#0e0730]/90 border border-cyan-500/50 text-cyan-300 text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+            SQL
+          </span>
+          <span className="px-3 py-1 rounded-lg bg-[#0e0730]/90 border border-emerald-500/50 text-emerald-300 text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            Excel
+          </span>
+          <span className="px-3 py-1 rounded-lg bg-[#0e0730]/90 border border-blue-500/50 text-blue-300 text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+            Python
+          </span>
+        </motion.div>
+
+        {/* Action Buttons: 2 Clear Primary CTAs */}
+        <motion.div
+          variants={slideInFromLeft(1)}
+          className="flex flex-wrap items-center gap-3.5 mt-1"
+        >
+          <Link
+            href="#projects"
+            className="py-3 px-6 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm tracking-wide shadow-[0_0_25px_rgba(0,229,255,0.4)] transition-all flex items-center gap-2 cursor-pointer group"
+          >
+            <span>View Projects</span>
+            <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+
+          <a
+            href="mailto:subodh.dataworks@gmail.com?subject=Data%20Analyst%20Role%20-%20Resume%20Request"
+            className="py-3 px-6 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 text-gray-200 hover:text-white font-semibold text-sm tracking-wide border border-purple-800/60 hover:border-cyan-400 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(112,66,248,0.25)]"
+          >
+            <FaFileDownload className="w-3.5 h-3.5 text-cyan-300" />
+            <span>Download Resume</span>
+          </a>
+        </motion.div>
 
         {/* Live Analytics KPI Ribbon */}
         <motion.div
           variants={slideInFromLeft(0.9)}
-          className="grid grid-cols-3 gap-3 my-2"
+          className="grid grid-cols-3 gap-3 my-1 pt-1"
         >
           {/* KPI 1 */}
           <div className="p-3 rounded-2xl bg-[#0e0730]/70 border border-cyan-500/40 backdrop-blur-md">
-            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Volume Analyzed</span>
+            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold font-mono">Volume Analyzed</span>
             <span className="text-lg sm:text-xl font-extrabold text-cyan-300 font-mono">₹3.47B+</span>
           </div>
 
           {/* KPI 2 */}
           <div className="p-3 rounded-2xl bg-[#0e0730]/70 border border-purple-500/40 backdrop-blur-md">
-            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Transactions</span>
+            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold font-mono">Transactions</span>
             <span className="text-lg sm:text-xl font-extrabold text-purple-200 font-mono">288K+</span>
           </div>
 
           {/* KPI 3 */}
           <div className="p-3 rounded-2xl bg-[#0e0730]/70 border border-emerald-500/40 backdrop-blur-md">
-            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Data Accuracy</span>
+            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold font-mono">Success Rate</span>
             <span className="text-lg sm:text-xl font-extrabold text-emerald-300 font-mono">96% SLA</span>
           </div>
-        </motion.div>
-
-        {/* Action Buttons */}
-        <motion.div
-          variants={slideInFromLeft(1)}
-          className="flex flex-wrap gap-3.5 mt-2"
-        >
-          <Link
-            href="#projects"
-            className="py-3 px-6 button-primary text-center text-white font-semibold cursor-pointer rounded-xl border border-[#7042f88b] hover:shadow-[0_0_30px_rgba(112,66,248,0.5)] transition-all duration-300 text-sm tracking-wide"
-          >
-            Explore Dashboards
-          </Link>
-          <Link
-            href="#certification"
-            className="py-3 px-5 bg-gradient-to-r from-blue-900/60 to-cyan-950/60 hover:from-blue-800/80 hover:to-cyan-900/80 text-cyan-300 hover:text-white font-semibold cursor-pointer rounded-xl border border-cyan-500/50 transition-all duration-300 text-sm tracking-wide flex items-center gap-2 shadow-[0_0_20px_rgba(0,164,239,0.3)]"
-          >
-            <FaMicrosoft className="text-[#00A4EF]" />
-            <span>Verify PL-300</span>
-          </Link>
-          <Link
-            href="#experience"
-            className="py-3 px-5 bg-purple-950/40 hover:bg-purple-900/50 text-gray-200 hover:text-white font-medium cursor-pointer rounded-xl border border-purple-800/40 transition-all duration-300 text-sm tracking-wide"
-          >
-            View Experience
-          </Link>
         </motion.div>
       </div>
 

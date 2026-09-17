@@ -13,13 +13,13 @@ export const Projects = () => {
       title: "PhonePe Payment Analytics Dashboard",
       category: "Fintech & Power BI",
       description:
-        "Enterprise Power BI analytics platform processing 288K+ digital transactions worth ₹3B across 108K unique users with 96% SLA success rate. Evaluated loan-to-service growth and user demographics.",
+        "Power BI analytics platform processing 288K+ digital transactions worth ₹3.47B across 108K unique users with 96% SLA success rate. Evaluated payment velocity, failure root causes, and user demographics.",
       daxArchitecture:
         "Engineered time-intelligence DAX measures (MoM/YoY growth, transaction velocity), age-segment slicers, and weekday vs. weekend distribution models.",
       image: "/projects/phonepe-analytics.jpg",
       link: "https://github.com/subodhdataworks/PhonePe-Payment-Analytics-PowerBI",
       tags: ["Power BI", "DAX", "Power Query", "SQL", "Fintech"],
-      metric: "₹3B Volume • 288K Txns • 96% Success",
+      metric: "₹3.47B Volume • 288K+ Txns • 96% Success",
       filterType: "POWER_BI",
     },
     {
@@ -31,7 +31,7 @@ export const Projects = () => {
         "Custom calculated columns for nutritional health indices, global market presence geo-mapping, and Top 5 high-caffeine beverage filters.",
       image: "/projects/starbucks-analytics.jpg",
       link: "https://github.com/subodhdataworks/-Starbucks-Beverage-Analytics-Dashboard-Power-BI",
-      tags: ["Power BI", "Power Query", "DAX", "Advanced Excel"],
+      tags: ["Power BI", "Power Query", "DAX", "Excel"],
       metric: "33 Beverages • Nutrition KPIs • Global Map",
       filterType: "POWER_BI",
     },
@@ -62,8 +62,8 @@ export const Projects = () => {
     >
       <div className="text-center mb-10">
         <div className="Welcome-box py-[6px] px-[14px] border border-[#7042f88b] opacity-[0.95] mx-auto mb-4">
-          <span className="Welcome-text text-[13px] font-semibold tracking-wider uppercase">
-            Production-Grade Case Studies
+          <span className="Welcome-text text-[13px] font-semibold tracking-wider uppercase font-mono">
+            02 // FEATURED PROJECTS
           </span>
         </div>
 
@@ -71,7 +71,7 @@ export const Projects = () => {
           Featured Analytics Projects
         </h2>
         <p className="text-gray-300 mt-3 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-          Interactive dashboards, star-schema data models, and predictive machine learning architectures built for real-world enterprise impact.
+          Interactive Power BI dashboards, DAX data models, and analytical solutions answering critical business questions.
         </p>
       </div>
 

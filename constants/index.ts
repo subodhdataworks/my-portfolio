@@ -144,11 +144,11 @@ export const PROJECTS = [
   {
     title: "PhonePe Payment Analytics Dashboard",
     description:
-      "Interactive Power BI dashboard analyzing 288K+ digital transactions worth ₹3B across 108K unique users (96% success rate). Designed time-intelligence DAX measures, loan & service value distributions, age-segment analysis, and weekday vs. weekend transaction KPIs.",
+      "Interactive Power BI dashboard analyzing 288K+ digital transactions worth ₹3.47B across 108K unique users (96% success rate). Designed time-intelligence DAX measures, loan & service value distributions, age-segment analysis, and weekday vs. weekend transaction KPIs.",
     image: "/projects/phonepe-analytics.jpg",
     link: "https://github.com/subodhdataworks/PhonePe-Payment-Analytics-PowerBI",
     tags: ["Power BI", "DAX", "Power Query", "SQL"],
-    metric: "₹3B Volume • 288K Txns • 96% Success",
+    metric: "₹3.47B Volume • 288K+ Txns • 96% Success",
   },
   {
     title: "Starbucks Beverage Analytics Dashboard",
@@ -189,9 +189,9 @@ export const EXPERIENCES = [
     company: "Ganesh Foundry & Castings Limited",
     location: "Muzaffarpur, India",
     period: "May 2020 - Dec 2025",
-    type: "Full-time (5+ Years)",
+    type: "Full-time",
     achievements: [
-      "Managed 5+ years of purchase, sales, inventory, and operational data in Google Sheets, maintaining daily/monthly MIS reports and dashboards for management analysis.",
+      "Managed purchase, sales, inventory, and operational data in Google Sheets, maintaining daily and monthly MIS reports and dashboards for management review.",
       "Tracked 170+ tonnes/day of Furnace production and 120+ tonnes/day of Rolling Mill production, recording production, consumption, scrap, stock movement, and reconciliation.",
       "Processed and monitored 100+ tonnes/day of finished-goods dispatches, maintaining party-wise, truck-wise, weight-wise, and product-wise records for TMT Bars and Square Patti.",
       "Recorded and reconciled ₹6.5+ lakh in daily cash transactions, while maintaining Scrap and Sponge Iron purchases, advances, supplier payments, freight, diesel, and other operational expenses.",
@@ -327,20 +327,20 @@ export const NAV_LINKS = [
     link: "#about-me",
   },
   {
-    title: "PL-300 Certified",
-    link: "#certification",
+    title: "Projects",
+    link: "#projects",
   },
   {
     title: "Skills",
     link: "#skills",
   },
   {
-    title: "Projects",
-    link: "#projects",
-  },
-  {
     title: "Experience",
     link: "#experience",
+  },
+  {
+    title: "PL-300 Certified",
+    link: "#certification",
   },
 ] as const;
 
