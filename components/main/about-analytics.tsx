@@ -142,11 +142,11 @@ def clean_operational_metrics(df: pd.DataFrame) -> pd.DataFrame:
       stat: "₹3.47B+ Modeled",
     },
     {
-      title: "5+ Years Industrial MIS",
+      title: "Industrial Operations MIS",
       icon: FaIndustry,
       badge: "Ganesh Foundry & Castings",
-      desc: "5+ years of tracking 170+ TPD Furnace production, 120+ TPD Rolling Mill output, stock reconciliations, and daily ₹6.5+ lakh cash register accountability.",
-      stat: "5+ Years MIS Experience",
+      desc: "Comprehensive tracking of 170+ TPD Furnace production, 120+ TPD Rolling Mill output, stock reconciliations, and daily ₹6.5+ lakh cash register accountability.",
+      stat: "Operations & Audit MIS",
     },
     {
       title: "Predictive AI & Python",

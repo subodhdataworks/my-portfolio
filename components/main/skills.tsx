@@ -47,10 +47,10 @@ export const Skills = () => {
         },
         {
           name: "Google Sheets",
-          level: "5+ Years Daily MIS",
+          level: "Advanced Daily MIS",
           exp: "Senior",
           image: "/skills/sheets.svg",
-          desc: "Engineered 5+ years of live operational inventory, production, and cash flow ledgers.",
+          desc: "Engineered live operational inventory, production, and cash flow ledgers.",
         },
       ],
     },

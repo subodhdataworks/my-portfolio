@@ -75,14 +75,13 @@ export const HeroContent = () => {
             Microsoft Certified Power BI Data Analyst (PL-300)
           </strong>{" "}
           specializing in DAX data modeling, SQL pipelines, and executive KPI scorecards. Experienced in modeling over{" "}
-          <span className="text-cyan-300 font-bold">₹3.47B+ across 288K+ digital transactions</span> and managing{" "}
-          <span className="text-purple-300 font-bold">5+ years</span> of heavy industrial operational MIS.
+          <span className="text-cyan-300 font-bold">₹3.47B+ across 288K+ digital transactions</span>.
         </motion.p>
 
         {/* Live Analytics KPI Ribbon */}
         <motion.div
           variants={slideInFromLeft(0.9)}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-2"
+          className="grid grid-cols-3 gap-3 my-2"
         >
           {/* KPI 1 */}
           <div className="p-3 rounded-2xl bg-[#0e0730]/70 border border-cyan-500/40 backdrop-blur-md">
@@ -100,12 +99,6 @@ export const HeroContent = () => {
           <div className="p-3 rounded-2xl bg-[#0e0730]/70 border border-emerald-500/40 backdrop-blur-md">
             <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Data Accuracy</span>
             <span className="text-lg sm:text-xl font-extrabold text-emerald-300 font-mono">96% SLA</span>
-          </div>
-
-          {/* KPI 4 */}
-          <div className="p-3 rounded-2xl bg-[#0e0730]/70 border border-blue-500/40 backdrop-blur-md">
-            <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Experience</span>
-            <span className="text-lg sm:text-xl font-extrabold text-blue-200 font-mono">5+ Years</span>
           </div>
         </motion.div>
 
@@ -251,7 +244,7 @@ export const HeroContent = () => {
             </div>
           </motion.div>
 
-          {/* Floating Pill 3: Bottom-Left 5+ Years MIS Experience */}
+          {/* Floating Pill 3: Bottom-Left Enterprise BI Modeling */}
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
@@ -259,7 +252,7 @@ export const HeroContent = () => {
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
             <span className="text-[10px] font-semibold text-purple-200">
-              5+ Years Operations MIS &amp; Audit
+              Enterprise BI &amp; DAX Modeling
             </span>
           </motion.div>
         </div>
