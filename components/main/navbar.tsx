@@ -9,27 +9,27 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-4 md:px-10">
+    <nav className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/30 bg-[#030014]/85 backdrop-blur-xl border-b border-purple-900/25 z-50 px-4 md:px-10">
       {/* Navbar Container */}
       <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
         {/* Logo + Name */}
         <Link
           href="#about-me"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2.5"
         >
           <Image
             src="/logo.png"
             alt="Subodh Kumar Logo"
-            width={55}
-            height={55}
+            width={46}
+            height={46}
             draggable={false}
             className="cursor-pointer hover:scale-105 transition-transform"
           />
-          <div className="hidden md:flex flex-col">
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 text-[15px] tracking-wide">
+          <div className="flex flex-col">
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 text-xs sm:text-[15px] tracking-wide">
               SUBODH KUMAR
             </span>
-            <span className="text-[11px] text-gray-400 tracking-wider uppercase font-medium">
+            <span className="text-[9px] sm:text-[11px] text-gray-400 tracking-wider uppercase font-medium">
               Data Analyst &amp; BI
             </span>
           </div>
