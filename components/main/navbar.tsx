@@ -15,18 +15,22 @@ export const Navbar = () => {
         {/* Logo + Name */}
         <Link
           href="#about-me"
-          className="flex items-center gap-2.5"
+          className="flex items-center gap-2.5 group"
         >
-          <Image
-            src="/logo.png"
-            alt="Subodh Kumar Logo"
-            width={46}
-            height={46}
-            draggable={false}
-            className="cursor-pointer hover:scale-105 transition-transform"
-          />
+          <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full p-[1.5px] bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-[0_0_15px_rgba(0,229,255,0.4)] group-hover:shadow-[0_0_22px_rgba(0,229,255,0.7)] transition-all flex-shrink-0">
+            <div className="w-full h-full rounded-full overflow-hidden relative bg-[#030014]">
+              <Image
+                src="/subodh-avatar.jpg"
+                alt="Subodh Kumar"
+                fill
+                sizes="48px"
+                priority
+                className="object-cover group-hover:scale-105 transition-transform"
+              />
+            </div>
+          </div>
           <div className="flex flex-col">
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 text-xs sm:text-[15px] tracking-wide">
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 text-xs sm:text-[15px] tracking-wide group-hover:from-purple-300 group-hover:to-cyan-300 transition-colors">
               SUBODH KUMAR
             </span>
             <span className="text-[9px] sm:text-[11px] text-gray-400 tracking-wider uppercase font-medium">
