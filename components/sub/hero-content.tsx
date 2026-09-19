@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -16,8 +16,6 @@ import {
   FaPlay,
   FaArrowRight,
   FaFileDownload,
-  FaVolumeUp,
-  FaVolumeMute,
 } from "react-icons/fa";
 
 import {
@@ -28,20 +26,6 @@ import {
 
 export const HeroContent = () => {
   const [photoView, setPhotoView] = useState<"video" | "circle" | "card">("video");
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleAudio = (e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-    if (videoRef.current) {
-      const nextMuted = !isMuted;
-      videoRef.current.muted = nextMuted;
-      setIsMuted(nextMuted);
-      if (!nextMuted) {
-        videoRef.current.play().catch(() => {});
-      }
-    }
-  };
 
   return (
     <motion.div
@@ -176,57 +160,39 @@ export const HeroContent = () => {
         className="w-full lg:w-1/2 flex flex-col items-center justify-center relative mt-8 lg:mt-0 max-w-full"
       >
         {/* Ambient Glows */}
-        <div className="absolute w-[320px] sm:w-[460px] md:w-[540px] h-[260px] sm:h-[340px] md:h-[400px] bg-gradient-to-r from-cyan-600/25 via-blue-600/20 to-purple-600/25 rounded-full blur-3xl -z-10 animate-pulse pointer-events-none" />
+        <div className="absolute w-[280px] sm:w-[360px] md:w-[480px] h-[280px] sm:h-[360px] md:h-[480px] bg-gradient-to-r from-cyan-600/25 via-blue-600/20 to-purple-600/25 rounded-full blur-3xl -z-10 animate-pulse pointer-events-none" />
 
         {/* Orbiting Subtle Cyber Rings */}
-        <div className="absolute w-[320px] sm:w-[460px] md:w-[540px] h-[320px] sm:h-[460px] md:h-[540px] rounded-full border border-cyan-500/20 border-dashed animate-[spin_40s_linear_infinite] pointer-events-none" />
-        <div className="absolute w-[360px] sm:w-[500px] md:w-[580px] h-[360px] sm:h-[500px] md:h-[580px] rounded-full border border-purple-500/15 animate-[spin_55s_linear_infinite_reverse] pointer-events-none" />
+        <div className="absolute w-[290px] sm:w-[380px] md:w-[480px] h-[290px] sm:h-[380px] md:h-[480px] rounded-full border border-cyan-500/20 border-dashed animate-[spin_40s_linear_infinite] pointer-events-none" />
+        <div className="absolute w-[320px] sm:w-[430px] md:w-[530px] h-[320px] sm:h-[430px] md:h-[530px] rounded-full border border-purple-500/15 animate-[spin_55s_linear_infinite_reverse] pointer-events-none" />
 
         {/* Main Photo/Video Showcase Frame */}
-        <div className="relative group w-full flex justify-center">
+        <div className="relative group">
           {photoView === "video" ? (
-            /* View 1: Live Executive Video of Subodh with Voice */
-            <div className="relative w-full max-w-[340px] sm:max-w-[480px] md:max-w-[540px] aspect-[16/9] rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-400/80 via-indigo-500/60 to-purple-500/80 shadow-[0_0_55px_rgba(0,229,255,0.5)] hover:shadow-[0_0_75px_rgba(0,229,255,0.7)] transition-all duration-500">
+            /* View 1: Live Studio Executive Video of Subodh (Transparent Cosmic Portal) */
+            <div className="relative w-[270px] sm:w-[335px] md:w-[375px] h-[350px] sm:h-[430px] md:h-[480px] rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-400/80 via-indigo-500/60 to-purple-500/80 shadow-[0_0_55px_rgba(0,229,255,0.5)] hover:shadow-[0_0_75px_rgba(0,229,255,0.7)] transition-all duration-500">
               {/* Internal cosmic aura glow */}
               <div className="absolute inset-0 bg-radial from-cyan-500/10 via-purple-500/5 to-transparent rounded-3xl pointer-events-none" />
               <div className="w-full h-full rounded-[22px] overflow-hidden bg-[#030014]/40 backdrop-blur-[2px] relative">
                 <video
-                  ref={videoRef}
                   autoPlay
                   loop
-                  muted={isMuted}
+                  muted
                   playsInline
                   preload="metadata"
-                  onClick={toggleAudio}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 cursor-pointer"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  style={{
+                    maskImage: "linear-gradient(to bottom, black 86%, transparent 100%)",
+                    WebkitMaskImage: "linear-gradient(to bottom, black 86%, transparent 100%)",
+                  }}
                 >
-                  <source src="/videos/subodh-intro-voice.mp4" type="video/mp4" />
+                  <source src="/videos/subodh-studio-transparent.webm" type="video/webm" />
+                  <source src="/videos/subodh-studio-space.mp4" type="video/mp4" />
                 </video>
-
-                {/* Top Badge: Live Intro */}
-                <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 py-1 px-2.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 text-[9px] sm:text-[10px] font-bold text-cyan-300 flex items-center gap-1.5 shadow-md z-10 pointer-events-none">
+                <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 py-1 px-2 sm:px-2.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 text-[9px] sm:text-[10px] font-bold text-cyan-300 flex items-center gap-1.5 shadow-md z-10">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                  <span>LIVE INTRO • WITH VOICE</span>
+                  <span>TRANSPARENT STUDIO VIEW</span>
                 </div>
-
-                {/* Bottom Left: Interactive Audio Toggle Button */}
-                <button
-                  type="button"
-                  onClick={toggleAudio}
-                  className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 py-1.5 px-3 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/60 text-cyan-300 text-[11px] sm:text-xs font-bold flex items-center gap-2 shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:bg-cyan-950/90 transition-all z-20 cursor-pointer group/btn"
-                >
-                  {isMuted ? (
-                    <>
-                      <FaVolumeMute className="w-3.5 h-3.5 text-amber-400 animate-pulse group-hover/btn:scale-110 transition-transform" />
-                      <span>Tap for Voice 🔊</span>
-                    </>
-                  ) : (
-                    <>
-                      <FaVolumeUp className="w-3.5 h-3.5 text-emerald-400 group-hover/btn:scale-110 transition-transform" />
-                      <span>Voice Active 🎙️</span>
-                    </>
-                  )}
-                </button>
               </div>
             </div>
           ) : photoView === "circle" ? (
@@ -261,7 +227,7 @@ export const HeroContent = () => {
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-5 -left-2 sm:-top-6 sm:-left-4 md:-left-8 flex items-center gap-2 sm:gap-3 py-1.5 px-3 sm:py-2 sm:px-4 rounded-2xl bg-[#07021b]/95 backdrop-blur-xl border border-cyan-400/60 shadow-[0_0_30px_rgba(0,164,239,0.45)] z-30 group-hover:scale-105 transition-transform"
+            className="absolute -top-5 -left-3 sm:-top-6 sm:-left-12 flex items-center gap-2 sm:gap-3 py-1.5 px-3 sm:py-2 sm:px-4 rounded-2xl bg-[#07021b]/95 backdrop-blur-xl border border-cyan-400/60 shadow-[0_0_30px_rgba(0,164,239,0.45)] z-30 group-hover:scale-105 transition-transform"
           >
             <div className="relative w-9 h-9 sm:w-11 sm:h-11 flex-shrink-0 drop-shadow-[0_0_10px_rgba(0,164,239,0.7)]">
               <Image
@@ -288,7 +254,7 @@ export const HeroContent = () => {
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-3 -right-2 sm:-bottom-3 sm:-right-4 md:-right-6 flex items-center gap-2 sm:gap-2.5 py-1.5 px-3 sm:px-3.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-500/50 shadow-[0_0_20px_rgba(0,229,255,0.3)] z-30"
+            className="absolute -bottom-3 -right-2 sm:-bottom-3 sm:-right-8 flex items-center gap-2 sm:gap-2.5 py-1.5 px-3 sm:px-3.5 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-500/50 shadow-[0_0_20px_rgba(0,229,255,0.3)] z-30"
           >
             <span className="p-1 sm:p-1.5 rounded-full bg-cyan-950/70 text-cyan-300">
               <FaChartLine className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
@@ -301,6 +267,18 @@ export const HeroContent = () => {
                 288K+ Transactions
               </span>
             </div>
+          </motion.div>
+
+          {/* Floating Pill 3: Bottom-Left Enterprise BI Modeling */}
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            className="hidden sm:flex absolute bottom-8 -left-10 items-center gap-2 py-1 px-3 rounded-full bg-[#030014]/90 backdrop-blur-md border border-purple-500/40 shadow-lg z-30"
+          >
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+            <span className="text-[10px] font-semibold text-purple-200">
+              Enterprise BI &amp; DAX Modeling
+            </span>
           </motion.div>
         </div>
 
@@ -315,7 +293,7 @@ export const HeroContent = () => {
                 : "text-gray-400 hover:text-white"
             }`}
           >
-            🎬 Video with Voice
+            🎬 Studio Video
           </button>
           <button
             type="button"
