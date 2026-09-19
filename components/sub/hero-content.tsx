@@ -196,7 +196,7 @@ export const HeroContent = () => {
                   loop
                   muted={isMuted}
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   onClick={toggleAudio}
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 cursor-pointer"
                 >

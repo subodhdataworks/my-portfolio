@@ -149,22 +149,10 @@ export const Skills = () => {
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
           >
             <source src="/videos/universe_data_analytics.mp4" type="video/mp4" />
           </video>
-
-          {/* Glowing Cosmic Telemetry Overlay */}
-          <div className="absolute top-4 left-4 flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#030014]/90 backdrop-blur-md border border-cyan-400/50 shadow-lg">
-            <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping" />
-            <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
-              🪐 Cosmos Analytics • 3D Data Universe
-            </span>
-          </div>
-
-          <div className="absolute bottom-4 right-4 hidden sm:flex items-center gap-3 py-1.5 px-4 rounded-full bg-[#030014]/90 backdrop-blur-md border border-purple-500/40 text-xs font-medium text-purple-200">
-            <span>High-Dimensional Analytics &amp; Pipeline Engine</span>
-          </div>
         </div>
       </div>
 
@@ -230,21 +218,6 @@ export const Skills = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Atmospheric Background Video (Cosmos Analytics) */}
-      <div className="w-full h-full absolute top-0 left-0 -z-10 overflow-hidden pointer-events-none">
-        <video
-          className="w-full h-full object-cover opacity-25"
-          preload="auto"
-          playsInline
-          loop
-          muted
-          autoPlay
-        >
-          <source src="/videos/universe_data_analytics.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030014] via-transparent to-[#030014] opacity-80" />
       </div>
     </section>
   );

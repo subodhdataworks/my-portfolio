@@ -8,7 +8,7 @@ export const Hero = () => {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         className="rotate-180 absolute top-[-460px] sm:top-[-340px] left-0 w-full h-[750px] sm:h-full object-cover -z-20 opacity-50 sm:opacity-80 pointer-events-none"
       >
         <source src="/videos/blackhole.webm" type="video/webm" />
